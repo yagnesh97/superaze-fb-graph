@@ -20,7 +20,7 @@ class Facebook:
         data = graph.create_post(page_id=page_id, message=f"{name}\n\n{description}\n\nCredits: {provider_name}", link=url)
         return data["id"]
 
-@app.route(route="FacebookPost", methods=[func.HttpMethod.POST])
+@app.route(route="FacebookPost")
 def FacebookPost(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
