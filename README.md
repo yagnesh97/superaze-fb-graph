@@ -40,3 +40,6 @@ Explore [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-function
 * Refer [Functions deployment](https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-python?pivots=python-mode-decorators) to run the function locally and deploy your project & function app.
 * Refer [Secrets in Github Actions](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions) to configure your secrets such `FUNCTION_URL` and `ACCESS_TOKEN` in your [master.yml](.github/workflows/master.yml).
 * Configure your endpoint in the [master.yml](.github/workflows/master.yml) and push your commits to the remote master branch in order to execute your workflow.
+
+## License
+Distributed under the GNU License. See [LICENSE](LICENSE) for more information.
