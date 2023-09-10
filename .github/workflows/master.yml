@@ -19,6 +19,6 @@ jobs:
         uses: Satak/webrequest-action@v1.2.3
         with:
           # Web request URL endpoint
-          url: "https://superaze.azurewebsites.net/api/FacebookPost?code=${{ secrets.FUNCTION_KEY }}"
+          url: "${{ secrets.FUNCTION_URL }}"
           method: POST
           headers: '{"access-token": "${{ secrets.ACCESS_TOKEN }}"}'
