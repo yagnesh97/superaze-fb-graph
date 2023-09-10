@@ -5,7 +5,7 @@ Introducing a comprehensive guide to efficiently automate the process of publish
 
 * Python 3
 * Account on [Github](https://github.com/)
-* Account and app on [Meta for Developers](https://developers.facebook.com/apps/611749401076520/dashboard/)
+* Account and app on [Meta for Developers](https://developers.facebook.com/docs/development/create-an-app/)
 * Account on [Microsoft Azure](https://portal.azure.com/)
 
 ## Getting Started
