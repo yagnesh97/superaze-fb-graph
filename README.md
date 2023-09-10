@@ -1,5 +1,5 @@
 # Getting Started with Automate Facebook Post with Graph API
-Presenting a comprehensive guide to streamline the process of publishing posts on your Facebook page through automation.
+Introducing a comprehensive guide to efficiently automate the process of publishing posts on your Facebook page.
 
 ## Prerequisites
 
