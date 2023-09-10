@@ -32,7 +32,7 @@ Subscribe to [Bing News Search API](https://learn.microsoft.com/en-us/bing/searc
 
 Explore [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/) to set up your serverless computing service and obtain your [Function URL](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=python-v2%2Cin-process%2Cfunctionsv2&pivots=programming-language-python#usage), a HTTP endpoint for executing your code.
 
-### Deployment
+## Deployment
 
 #### Set Environment Variables
 
