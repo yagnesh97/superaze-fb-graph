@@ -1,27 +1,31 @@
-import requests
-from app.utilities.config import settings
 import logging
+from typing import Any, Union
 
-from typing import Any
+import requests
+
+from app.utilities.config import settings
+
 
 class Bing:
-    def fetch_news(self) -> dict[str, Any]:
+    def fetch_news(self) -> Any:
         try:
+            params: dict[str, Union[str, bool]] = {
+                "q": "",
+                "mkt": "en-IN",
+                "originalImg": True,
+                "freshness": "Day",
+                "safeSearch": "Strict",
+                "setLang": "en",
+                "cc": "IN",
+                "textDecorations": False,
+                "textFormat": "raw",
+                "sortBy": "Date",
+            }
             r = requests.get(
                 f"{settings.bing_url}/news/search",
                 headers={"Ocp-Apim-Subscription-Key": settings.bing_token},
-                params={
-                    "q": "",
-                    "mkt": "en-IN",
-                    "originalImg": True,
-                    "freshness": "Day",
-                    "safeSearch": "Strict",
-                    "setLang": "en",
-                    "cc": "IN",
-                    "textDecorations": False,
-                    "textFormat": "raw",
-                    "sortBy": "Date"
-                })
+                params=params,
+            )
             r.raise_for_status()
         except requests.exceptions.HTTPError as err:
             logging.error(f"HTTPError: {err}")
@@ -29,7 +33,5 @@ class Bing:
             logging.error(f"Exception: {err}")
         else:
             data = r.json()
-            value = data.get("value")
-            if value:
-                return value[0]
-            return None
+            value = data["value"]
+            return value
