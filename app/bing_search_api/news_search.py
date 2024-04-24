@@ -10,22 +10,17 @@ class Bing:
     def fetch_news(self) -> Any:
         try:
             params: dict[str, Union[str, bool]] = {
-                "q": "",
                 "mkt": "en-IN",
-                "originalImg": True,
                 "freshness": "Day",
                 "safeSearch": "Strict",
-                "setLang": "en",
-                "cc": "IN",
-                "textDecorations": False,
-                "textFormat": "raw",
                 "sortBy": "Date",
             }
             r = requests.get(
-                f"{settings.bing_url}/news/search",
+                f"{settings.bing_url}/news",
                 headers={"Ocp-Apim-Subscription-Key": settings.bing_token},
                 params=params,
             )
+            print(r.text)
             r.raise_for_status()
         except requests.exceptions.HTTPError as err:
             logging.error(f"HTTPError: {err}")
