@@ -5,10 +5,9 @@ import azure.functions as func
 
 from app.bing_search_api.news_search import Bing
 from app.graph_api.graph import Graph
-from app.utilities.config import settings
 from app.utilities.db import db
 
-app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
+app = func.FunctionApp()
 
 
 class Facebook:
@@ -41,16 +40,15 @@ class Facebook:
         return data["id"]
 
 
-@app.route(route="FacebookPost", methods=[func.HttpMethod.POST])
-def FacebookPost(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info("Python HTTP trigger function processed a request.")
-
-    func_token = req.headers.get("access-token")
-    assert func_token == settings.token, "Invalid access token."
+@app.schedule(
+    schedule="0 0 * * * *", arg_name="timer", run_on_startup=True, use_monitor=False
+)
+def FacebookPost(timer: func.TimerRequest) -> None:
+    if timer.past_due:
+        logging.info("The timer is past due!")
 
     fb = Facebook()
     post_id = fb.publish_post()
 
-    return func.HttpResponse(
-        f"Post published succeesfully! Post ID: {post_id}", status_code=200
-    )
+    logging.info(f"Post published succeesfully! Post ID: {post_id}")
+    logging.info("Python timer trigger function executed.")
