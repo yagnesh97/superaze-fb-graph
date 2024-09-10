@@ -1,3 +1,5 @@
+[![Publish a post on a Facebook page](https://github.com/yagnesh97/superaze-fb-graph/actions/workflows/master.yml/badge.svg)](https://github.com/yagnesh97/superaze-fb-graph/actions/workflows/master.yml)
+
 # Getting Started with Automate Facebook Post with Graph API
 Introducing a comprehensive guide to efficiently automate the process of publishing posts on your Facebook page.
 
