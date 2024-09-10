@@ -1,12 +1,9 @@
-[![Publish a post on a Facebook page](https://github.com/yagnesh97/superaze-fb-graph/actions/workflows/master.yml/badge.svg)](https://github.com/yagnesh97/superaze-fb-graph/actions/workflows/master.yml)
-
 # Getting Started with Automate Facebook Post with Graph API
 Introducing a comprehensive guide to efficiently automate the process of publishing posts on your Facebook page.
 
 ## Prerequisites
 
 * Python 3
-* Account on [Github](https://github.com/)
 * Account and app on [Meta for Developers](https://developers.facebook.com/docs/development/create-an-app/)
 * Account on [Microsoft Azure](https://portal.azure.com/)
 
@@ -32,7 +29,7 @@ Subscribe to [Bing News Search API](https://learn.microsoft.com/en-us/bing/searc
 
 ### Azure Functions
 
-Explore [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/) to set up your serverless computing service and obtain your [Function URL](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=python-v2%2Cin-process%2Cfunctionsv2&pivots=programming-language-python#usage), a HTTP endpoint for executing your code.
+Explore [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/) to set up your serverless computing service and create a [Timer trigger Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-timer?tabs=python-v2%2Cisolated-process%2Cnodejs-v4&pivots=programming-language-python), a cron script for executing your code.
 
 ## Deployment
 
@@ -40,8 +37,6 @@ Explore [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-function
 
 * Refer [Application Settings](https://learn.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings?tabs=portal#settings) in the `Function App` to configure the environment variables.
 * Refer [Functions deployment](https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-python?pivots=python-mode-decorators) to run the function locally and deploy your project & function app.
-* Refer [Secrets in Github Actions](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions) to configure your secrets such `FUNCTION_URL` and `ACCESS_TOKEN` in your [master.yml](.github/workflows/master.yml).
-* Configure your endpoint in the [master.yml](.github/workflows/master.yml) and push your commits to the remote master branch in order to execute your workflow.
 
 ## License
 Distributed under the GNU License. See [LICENSE](LICENSE) for more information.
