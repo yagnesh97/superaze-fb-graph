@@ -6,7 +6,7 @@ class Settings(BaseSettings):
     env: str = "staging"
     mongo_uri: str
     mongo_db: str
-    graph_url: str = "https://graph.facebook.com/v17.0"
+    graph_url: str = "https://graph.facebook.com/v20.0"
     graph_token: str
     page_name: str
 
