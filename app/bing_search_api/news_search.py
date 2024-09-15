@@ -20,7 +20,6 @@ class Bing:
                 headers={"Ocp-Apim-Subscription-Key": settings.bing_token},
                 params=params,
             )
-            print(r.text)
             r.raise_for_status()
         except requests.exceptions.HTTPError as err:
             logging.error(f"HTTPError: {err}")
