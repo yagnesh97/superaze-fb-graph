@@ -8,7 +8,7 @@ app = func.FunctionApp()
 
 
 @app.schedule(
-    schedule="0 */30 * * * *", arg_name="timer", run_on_startup=True, use_monitor=False
+    schedule="0 * * * * *", arg_name="timer", run_on_startup=True, use_monitor=False
 )
 def FacebookPost(timer: func.TimerRequest) -> None:
     if timer.past_due:
